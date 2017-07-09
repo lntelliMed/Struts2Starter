@@ -1,15 +1,21 @@
 package com.intellimed.action;
 
-public class LoginAction {
+import com.opensymphony.xwork2.Action;
+
+public class LoginAction implements Action {
 
 	private String userId;
 	private String password;
 	
+	//Instead of defining the below, you can just implement Action!
+	//private static final String SUCCESS="success";
+	//private static final String LOGIN="login";
+
 	public String execute(){
 		if (getUserId().equals("userId") && getPassword().equals("password")){
-			return "success";
+			return SUCCESS;
 		}
-		return "failure";
+		return LOGIN;
 	}
 
 	public String getUserId() {
