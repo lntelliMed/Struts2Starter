@@ -7,15 +7,27 @@
 <include file="login.xml" />
 
 <package name="default" namespace="/tutorials" extends="struts-default">
-	<action name="getTutorial" class="com.intellimed.action.TutorialAction">
+<!-- 	<action name="getTutorial" class="com.intellimed.action.TutorialAction"> -->
+<!-- 		<result name="success">/success.jsp</result> -->
+<!-- 		<result name="failure">/error.jsp</result> -->
+<!-- 	</action> -->
+
+	<action name="get*" class="com.intellimed.action.{1}Action">
 		<result name="success">/success.jsp</result>
 		<result name="failure">/error.jsp</result>
 	</action>
 </package>
 
 <package name="search" namespace="/" extends="struts-default">
-	<action name="searchForm">
-		<result>/searchForm.jsp</result>
+<!-- 	<action name="searchForm"> -->
+<!-- 		<result>/searchForm.jsp</result> -->
+<!-- 	</action> -->
+<!-- 	<action name="search*"> -->
+<!-- 		<result>/searchTutorial.jsp</result> -->
+<!-- 	</action> -->
+	
+	<action name="search*">
+		<result>/search{1}.jsp</result>
 	</action>
 </package>
 
