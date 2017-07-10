@@ -23,6 +23,7 @@
 <!-- 	</action> -->
 
  	<action name="getTutorial" class="com.intellimed.action.TutorialAction" method="getTutorial">
+ 		<interceptor-ref name="paramsPrepareParamsStack"></interceptor-ref>
 		<result name="success">/success.jsp</result>
 		<result name="failure">/error.jsp</result>
 	</action>
